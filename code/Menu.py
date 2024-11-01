@@ -5,7 +5,7 @@ import pygame.image
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Const import WIN_WIDTH, C_ORANGE, MENU_OPTION, C_WHITE, C_YELLOW
+from code.Const import WIN_WIDTH, WIN_HEIGHT, C_ORANGE, MENU_OPTION, C_WHITE, C_YELLOW
 
 
 class Menu:
@@ -29,6 +29,10 @@ class Menu:
                     self.menu_text(20, MENU_OPTION[i], C_YELLOW, ((WIN_WIDTH / 2), 200 + 25 * i))
                 else:
                     self.menu_text(20, MENU_OPTION[i], C_WHITE, ((WIN_WIDTH / 2), 200 + 25 * i))
+
+            # Display Name and RU in the bottom-right corner
+            self.menu_text(15, "Guilherme G. RU: 4513678", C_WHITE, (WIN_WIDTH - 120, WIN_HEIGHT - 15))
+
             pygame.display.flip()
 
             # Check for all events
